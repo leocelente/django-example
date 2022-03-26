@@ -68,7 +68,6 @@ TEMPLATES = [
     },
 ]
 
-print(f"template dir: {TEMPLATES[0]['DIRS']}")
 
 WSGI_APPLICATION = 'top_level_project.wsgi.application'
 
