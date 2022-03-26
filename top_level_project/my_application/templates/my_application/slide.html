@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" />
+        <title>Slide {{ i }}</title>
+    </head>
+    <body>
+        {% include "my_application/header.html" %}
+        <div id="content">
+            <div id="slide">
+                <h2>Slide #{{i}}</h2>
+                <img src="{{url}}.png" alt="" srcset="" />
+                <hr />
+                <a href="/slide/{{prev}}">Prev Slide</a>
+                <a href="/slide/{{next}}">Next Slide</a>
+            </div>
+        </div>
+        <script src="{% static 'js/app.js'%}"></script>
+    </body>
+</html>
